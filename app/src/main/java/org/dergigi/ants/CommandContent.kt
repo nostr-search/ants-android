@@ -51,7 +51,7 @@ internal fun HelpContent(onSearch: (String) -> Unit) {
                     color = terminalText, fontSize = 13.sp)
                 Text("v${BuildConfig.VERSION_NAME} ${BuildConfig.GIT_COMMIT.take(7)}",
                     Modifier.fillMaxWidth().clickable(role = Role.Button, onClickLabel = "Open GitHub release") {
-                        openUrl(context, "https://github.com/dergigi/ants-android/releases/tag/v${BuildConfig.VERSION_NAME}")
+                        openUrl(context, "https://github.com/nostr-search/ants-android/releases/tag/v${BuildConfig.VERSION_NAME}")
                     }.padding(top = 20.dp, bottom = 8.dp), color = terminalText, fontFamily = FontFamily.Monospace, fontSize = 13.sp)
     }
 }

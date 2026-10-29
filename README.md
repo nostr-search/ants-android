@@ -1,10 +1,10 @@
 # ants for Android
 
-A native Android search and discovery app for Nostr, based on [ants](https://github.com/dergigi/ants). Kotlin, Jetpack Compose, direct relay connections. No account required.
+A native Android search and discovery app for Nostr, based on [ants](https://github.com/nostr-search/ants). Kotlin, Jetpack Compose, direct relay connections. No account required.
 
-[Get it on Zapstore](https://zapstore.dev/apps/org.dergigi.ants) · [Download APK](https://github.com/dergigi/ants-android/releases)
+[Get it on Zapstore](https://zapstore.dev/apps/org.dergigi.ants) · [Download APK](https://github.com/nostr-search/ants-android/releases)
 
-[Source, issues, and pull requests on GitWorkshop](https://gitworkshop.dev/npub1dergggklka99wwrs92yz8wdjs952h2ux2ha2ed598ngwu9w7a6fsh9xzpc/relay.ngit.dev/ants-android) · [GitHub mirror](https://github.com/dergigi/ants-android)
+[Source, issues, and pull requests on GitWorkshop](https://gitworkshop.dev/npub1dergggklka99wwrs92yz8wdjs952h2ux2ha2ed598ngwu9w7a6fsh9xzpc/relay.ngit.dev/ants-android) · [GitHub mirror](https://github.com/nostr-search/ants-android)
 
 ## Source mirrors
 
@@ -92,7 +92,7 @@ Publishing follows [boris-android](https://github.com/dergigi/boris-android): `z
 
 ## License
 
-[MIT](LICENSE). Branding and the original search concept come from [ants](https://github.com/dergigi/ants); Nostr event and identifier helpers are adapted from [Boris](https://github.com/dergigi/boris-android).
+[MIT](LICENSE). Branding and the original search concept come from [ants](https://github.com/nostr-search/ants); Nostr event and identifier helpers are adapted from [Boris](https://github.com/dergigi/boris-android).
 
 ## Crash reports
 

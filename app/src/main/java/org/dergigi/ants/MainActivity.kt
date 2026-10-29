@@ -485,7 +485,7 @@ fun AntsApp(model: SearchModel) {
             }
             if (centeredHome) Text("v${BuildConfig.VERSION_NAME}",
                 Modifier.align(Alignment.BottomCenter).clickable(onClickLabel = "Open GitHub release") {
-                    openUrl(context, "https://github.com/dergigi/ants-android/releases/tag/v${BuildConfig.VERSION_NAME}")
+                    openUrl(context, "https://github.com/nostr-search/ants-android/releases/tag/v${BuildConfig.VERSION_NAME}")
                 }.padding(16.dp), color = muted, style = MaterialTheme.typography.bodySmall)
             }
         }

@@ -1,6 +1,6 @@
 # Android search syntax
 
-Android uses the action-free ANTLR grammar and aliases from [ants PR #313](https://github.com/dergigi/ants/pull/313).
+Android uses the action-free ANTLR grammar and aliases from [ants PR #313](https://github.com/nostr-search/ants/pull/313).
 
 | Query | Meaning |
 | --- | --- |
