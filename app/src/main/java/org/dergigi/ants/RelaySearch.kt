@@ -61,7 +61,7 @@ class RelaySearch {
                         when (message.optString(0)) {
                             "EVENT" -> if (message.optString(1) in active && seen.size < 500) {
                                 val branch = subscriptions[message.optString(1)] ?: return
-                                val event = Nip01Event.parse(message.getJSONObject(2)) ?: return
+                                val event = Nip01Event.parse(message.getJSONObject(2), sourceRelay = url) ?: return
                                 if (event.id !in seen && branch.accepts(event) && event.verify()) {
                                     val admitted = synchronized(admission) {
                                         when {

@@ -14,6 +14,7 @@ data class Nip01Event(
     val tags: List<List<String>>,
     val content: String,
     val sig: String,
+    val sourceRelay: String? = null,
 ) {
     internal val encryptedContent: Boolean by lazy { hasEncryptedContent() }
 
@@ -135,7 +136,7 @@ data class Nip01Event(
             return complete(pubkeyHex, createdAt, kind, tags, content, sig)
         }
 
-        fun parse(json: JSONObject): Nip01Event? {
+        fun parse(json: JSONObject, sourceRelay: String? = null): Nip01Event? {
             return try {
                 val tagsJson = json.getJSONArray("tags")
                 val tags = buildList {
@@ -154,6 +155,7 @@ data class Nip01Event(
                     tags = tags,
                     content = json.getString("content"),
                     sig = json.getString("sig"),
+                    sourceRelay = sourceRelay,
                 )
             } catch (_: Exception) {
                 null

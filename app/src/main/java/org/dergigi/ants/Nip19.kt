@@ -21,6 +21,13 @@ data class NprofilePointer(
     val relays: List<String> = emptyList(),
 )
 
+internal fun Nip01Event.clipboardUri(): String {
+    val hint = sourceRelay?.let(::secureRelayUrl)?.takeIf { it.toByteArray(Charsets.UTF_8).size <= 255 }
+        ?: return "nostr:${Nip19.noteEncode(id)}"
+    val pointer = NeventPointer(id, relays = listOf(hint), author = pubkey, kind = kind)
+    return "nostr:${Nip19.neventEncode(pointer)}"
+}
+
 object Nip19 {
     private const val CHARSET = "qpzry9x8gf2tvdw0s3jn54khce6mua7l"
     private val charsetRev = IntArray(128) { -1 }.also { table ->

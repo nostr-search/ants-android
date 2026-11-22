@@ -608,7 +608,7 @@ private fun EventCard(event: Nip01Event, profile: Profile?, profiles: Map<String
                         onNavigate("nostr:${Nip19.noteEncode(event.id)}")
                     }.heightIn(min = 48.dp).wrapContentHeight().padding(horizontal = 8.dp))
                 Row(Modifier.width(192.dp), horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
-                ActionIcon(Icons.Outlined.ContentCopy, "Copy event ID", { clipboard.setText(AnnotatedString("nostr:${Nip19.noteEncode(event.id)}")) })
+                ActionIcon(Icons.Outlined.ContentCopy, "Copy event ID", { clipboard.setText(AnnotatedString(event.clipboardUri())) })
                 ActionIcon(Icons.Outlined.PhoneAndroid, "Open in app", { openInNostrApp(context, event) })
                 ActionIcon(Icons.AutoMirrored.Outlined.OpenInNew, "Open in browser", { openUrl(context, "https://njump.to/${Nip19.noteEncode(event.id)}") })
                 ActionIcon(Icons.Outlined.MoreHoriz, "Event details and actions", onOpen)
@@ -663,7 +663,7 @@ private fun EventDetails(event: Nip01Event, profile: Profile?, profiles: Map<Str
             ActionIcon(Icons.Outlined.PhoneAndroid, "Open in app", { openInNostrApp(context, event) })
             ActionIcon(Icons.AutoMirrored.Outlined.OpenInNew, "Open in browser", { openUrl(context, "https://njump.to/${Nip19.noteEncode(event.id)}") })
             ActionIcon(Icons.Outlined.Share, "Share event", { context.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply { type = "text/plain"; putExtra(Intent.EXTRA_TEXT, eventUrl(event)) }, "Share event")) })
-            ActionIcon(Icons.Outlined.ContentCopy, if (raw) "Copy event JSON" else "Copy event ID", { clipboard.setText(AnnotatedString(if (raw) prettyEventJson(event) else "nostr:${Nip19.noteEncode(event.id)}")) })
+            ActionIcon(Icons.Outlined.ContentCopy, if (raw) "Copy event JSON" else "Copy event ID", { clipboard.setText(AnnotatedString(if (raw) prettyEventJson(event) else event.clipboardUri())) })
             ActionIcon(Icons.Outlined.DataObject, if (raw) "Show rendered event" else "Show raw event JSON", onToggleRaw, selected = raw)
         }
     }

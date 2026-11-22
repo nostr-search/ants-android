@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Include the relay that returned an event when copying its ID from search results or event details.
+
 ## [0.38.1] - 2026-10-30
 
 ### Changed
