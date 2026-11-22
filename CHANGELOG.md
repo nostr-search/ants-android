@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.38.2] - 2026-11-22
+
 ### Fixed
 
 - Include the relay that returned an event when copying its ID from search results or event details.
@@ -641,7 +643,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Signed APK release and Zapstore publishing using the Boris publishing setup.
 
-[Unreleased]: https://github.com/dergigi/ants-android/compare/v0.23.2...HEAD
+[Unreleased]: https://github.com/nostr-search/ants-android/compare/v0.38.2...HEAD
+[0.38.2]: https://github.com/nostr-search/ants-android/compare/v0.38.1...v0.38.2
 [0.23.2]: https://github.com/dergigi/ants-android/compare/v0.23.1...v0.23.2
 [0.23.1]: https://github.com/dergigi/ants-android/compare/v0.23.0...v0.23.1
 [0.23.0]: https://github.com/dergigi/ants-android/compare/v0.22.0...v0.23.0
